@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarwansubedi website</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Welcome to the personal website of Sarwan Subedi. Explore my profile, interests, and more.">
+    <meta name="keywords" content="Sarwan Subedi, personal website, portfolio, web development, design">
+    <meta name="author" content="Sarwan Subedi">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="content-language" content="en">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sarwansubedi website">
+    <meta property="og:description" content="Welcome to the personal website of Sarwan Subedi. Explore my profile, interests, and more.">
+    <meta property="og:image" content="URL_TO_YOUR_SOCIAL_MEDIA_SHARING_IMAGE">
+    <meta property="og:url" content="URL_TO_YOUR_WEBSITE">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sarwansubedi website">
+    <meta name="twitter:description" content="Welcome to the personal website of Sarwan Subedi. Explore my profile, interests, and more.">
+    <meta name="twitter:image" content="URL_TO_YOUR_SOCIAL_MEDIA_SHARING_IMAGE">
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Sarwan Subedi",
+            "jobTitle": "Web Developer and Designer",
+            "url": "URL_TO_YOUR_WEBSITE",
+            "sameAs": [
+                "URL_TO_YOUR_LINKEDIN_PROFILE",
+                "URL_TO_YOUR_GITHUB_PROFILE",
+                "URL_TO_YOUR_TWITTER_PROFILE"
+            ]
+        }
+    </script>
+
+
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="URL_TO_YOUR_CANONICAL_PAGE">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+    <!-- Your CSS code here -->
+    <style>
+        /* Your CSS code here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            background: #111;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            backdrop-filter: blur(1px);
+            pointer-events: none;
+            text-align: center;
+        }
+
+        /* Add your other styles here */
+        .bgAnimation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            background: #1d1d1d;
+            filter: saturate(2);
+            overflow: hidden;
+        }
+
+        .colorBox {
+            z-index: 2;
+            filter: brightness(1.1);
+            transition: 2s ease;
+            position: relative;
+            margin: 2px;
+            background: #1d1d1d;
+        }
+
+        .colorBox:hover {
+            background: #00bfff;
+            transition-duration: 0s;
+        }
+
+        .backgroundAmim {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #00bfff;
+            filter: blur(60px);
+            animation: animBack 6s linear infinite;
+        }
+
+        @keyframes animBack {
+            0% {
+                top: -60px;
+            }
+            100% {
+                top: 120%;
+            }
+        }
+
+        .textBox {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.4em;
+        }
+
+        h1 span {
+            color: #00bfff;
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10%;
+            object-fit: cover;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .topRightText {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            color: #ff6347;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing HTML content here -->
+    <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAmim"></div>
+    </div>
+    <div class="container">
+        <nav>
+            <!-- Your navigation content here -->
+        </nav>
+        <section class="textBox">
+            <h1><span>Sarwan</span> Subedi</h1>
+            <img src="IMG_20221103_204336-modified-removebg-preview.png" alt="Profile Image">
+            <div class="topRightText">Eat Sleep Repeat</div>
+        </section>
+    </div>
+
+    <!-- Your JavaScript code here -->
+    <script>
+        // Your JavaScript code here
+        const bgAnimation = document.getElementById('bgAnimation');
+        const numberOfColorBoxes = 400;
+
+        for (let i = 0; i < numberOfColorBoxes; i++) {
+            const colorBox = document.createElement('div');
+            colorBox.classList.add('colorBox');
+            bgAnimation.append(colorBox);
+        }
+    </script>
+</body>
+
+</html>
